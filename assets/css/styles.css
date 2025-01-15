@@ -5,8 +5,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
     margin: 0;
 }
 
@@ -22,7 +21,7 @@ body {
 
 header {
     position: absolute;
-    top: 15%;
+    top: 10%;
     left: 10%;
     text-align: left;
 }
@@ -55,7 +54,7 @@ header p {
 
 .skills-section {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 10%;
     transform: translateY(-50%);
     width: 40%;
@@ -69,10 +68,10 @@ header p {
 }
 
 .skill {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background: #f8f9fa;
-    border: 1px solid #f5f1f1;
+    border: 1px solid #ddd;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -93,8 +92,8 @@ header p {
     content: attr(alt);
     position: absolute;
     top: 110%;
-    background: #faf9f9;
-    color: #f8f3f3;
+    background: #333;
+    color: #fff;
     padding: 0.2rem 0.5rem;
     font-size: 0.8rem;
     border-radius: 3px;
@@ -104,7 +103,7 @@ header p {
 .projects-section {
     position: absolute;
     right: 5%;
-    top: 60%;
+    top: 50%;
     transform: translateY(-50%);
     width: 30%;
     overflow-y: auto;
@@ -141,7 +140,7 @@ header p {
 
 .contact-section {
     position: absolute;
-    bottom: 15%;
+    bottom: 20%;
     left: 10%;
 }
 
@@ -151,9 +150,9 @@ header p {
 }
 
 .contact a {
-    width: 65px;
-    height: 65px;
-    background: #f1f1f1;
+    width: 60px;
+    height: 60px;
+    background: #e9ebec;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -173,13 +172,13 @@ header p {
 }
 
 .contact a:hover {
-    background: #f3f4f5;
+    background: #9abfe7;
     transform: scale(1.2);
 }
 
 footer {
     position: absolute;
-    bottom: 1rem;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -189,7 +188,7 @@ footer {
 
 .placeholder-image {
     position: absolute;
-    top: 10px;
+    top: 5px;
     right: 10px;
     width: 50px;
     height: 50px;
@@ -208,46 +207,74 @@ footer {
 @media (max-width: 768px) {
     .container {
         width: 100%;
-        height: auto;
+        height: 100%;
+        max-width: 100%;
+    }
+
+    header {
+        top: 5%;
+        left: 5%;
+        transform: translate(0, 0);
+    }
+
+    .skills-section {
+        top: 35%;
+        left: 5%;
+        width: 90%;
+        transform: translate(0, 0);
+    }
+
+    .projects-section {
+        top: 60%;
+        left: 5%;
+        width: 90%;
+        transform: translate(0, 0);
+    }
+
+    .contact-section {
+        bottom: 10%;
+        left: 5%;
+        width: 90%;
+        transform: translate(0, 0);
+    }
+
+    .skill {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contact a {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        height: 100%;
         padding: 1rem;
     }
 
     header {
-        position: static;
-        text-align: center;
-        margin-bottom: 2rem;
+        top: 3%;
+        left: 5%;
+        font-size: 1.2rem;
     }
 
-    .skills-section {
-        position: static;
-        transform: none;
-        width: 100%;
-        margin-bottom: 2rem;
+    .skills-section, .projects-section, .contact-section {
+        width: 90%;
+        left: 5%;
+        transform: translate(0, 0);
     }
 
-    .skills {
-        justify-content: center;
+    .skill {
+        width: 40px;
+        height: 40px;
     }
 
-    .projects-section {
-        position: static;
-        transform: none;
-        width: 100%;
-        margin-bottom: 2rem;
+    .contact a {
+        width: 40px;
+        height: 40px;
     }
-
-    .contact-section {
-        position: static;
-        transform: none;
-        margin-bottom: 2rem;
-    }
-}
-
-body.dark-mode {
-    background-color: #121212;
-    color: #fff;
-}
-
-body.dark-mode .container {
-    background-color: #1e1e1e;
 }
