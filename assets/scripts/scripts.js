@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const themeIcon = document.getElementById("theme-icon");
 
     // Korrekte Pfade für die Icons
-    const sunIcon = "./assets/images/imgs/sun.jpg";  
+    const sunIcon = "./assets/images/imgs/sun.png";  
     const moonIcon = "./assets/images/imgs/moon.png";
 
     // Dark Mode prüfen & setzen
