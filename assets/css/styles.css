@@ -131,7 +131,7 @@ header p {
 
 .project:hover {
     transform: scale(1.05);
-    background-color: #e6f7ff;
+    background-color: #9abfe7;
 }
 
 .project h3 {
@@ -278,3 +278,176 @@ footer {
         height: 40px;
     }
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+header {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    text-align: left;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    color: #0056b3;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    width: 0;
+    animation: typing 2s steps(20, end) forwards;
+    transition: color 0.3s ease;
+}
+
+header h2 {
+    font-size: 2rem;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+header p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode header h1 {
+    color: #4dabf7;
+}
+
+body.dark-mode header h2 {
+    color: #6ea8fe;
+}
+
+body.dark-mode header p {
+    color: #bbb;
+}
+
+body.dark-mode .projects-section {
+    background: #222;
+    border-color: #444;
+}
+
+body.dark-mode .project {
+    background: #333;
+    color: #ddd;
+    border-color: #555;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .project:hover {
+    background-color: #444;
+}
+
+body.dark-mode .contact a {
+    background: #333;
+    border-color: #555;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode .contact a:hover {
+    background: #555;
+}
+
+/* Button Styling */
+.toggle-theme {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-theme img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+body.dark-mode .toggle-theme img {
+    filter: invert(1);
+}
+
+.toggle-theme:hover img {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+    }
+
+    header {
+        top: 5%;
+        left: 5%;
+        transform: translate(0, 0);
+    }
+
+    .skills-section, .projects-section, .contact-section {
+        width: 90%;
+        left: 5%;
+        transform: translate(0, 0);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+    }
+
+    header {
+        top: 3%;
+        left: 5%;
+        font-size: 1.2rem;
+    }
+
+    .skills-section, .projects-section, .contact-section {
+        width: 90%;
+        left: 5%;
+        transform: translate(0, 0);
+    }
+}
+
