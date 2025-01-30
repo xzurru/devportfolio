@@ -9,6 +9,10 @@
 </head>
 <body>
     <div class="container">
+        <button id="theme-toggle" class="toggle-theme">
+            <img id="theme-icon" src="./assets/images/icons/sun.png" alt="Toggle Theme">
+        </button>
+        
         <div class="placeholder-image">
             <img src="./assets/images/gifimg/xzurrugif.gif" alt="xzurrugif">
         </div>
@@ -33,13 +37,19 @@
         </section>
 
         <section class="projects-section">
-            <h3>My Projects & Experiences</h3>
+            <h2><strong>Projects & Experiences</strong></h2>
             <div class="projects">
+                <div class="project">
+                    <h3>MoveX</h3>
+                    <h2>2025 Jan</h2>
+                    <p>Is a verify cool app for fitness and mma boxing other sports</p>
+                    <a href="https://movex.dev"><strong>MoveX</strong></a>
+                </div>
                 <div class="project">
                     <h3>ZURRUMOD</h3>
                     <h2>2024 Dec</h2>
                     <p>zurrumod is my favorite project.</p>
-                    <a href="https://zurrumod.de">zurrumod.de</a>
+                    <a href="https://zurrumod.dev"><strong>zurrumod.dev</strong></a>
                 </div>
                 <div class="project">
                     <h3>ZURRUADMIN</h3>
@@ -68,5 +78,18 @@
         </footer>
     </div>
     <script src="assets/scripts/scripts.js"></script>
+    <script>
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            let themeIcon = document.getElementById('theme-icon');
+            if (document.body.classList.contains('dark-mode')) {
+                themeIcon.src = './assets/images/icons/moon.png';
+                themeIcon.alt = 'Switch to Light Mode';
+            } else {
+                themeIcon.src = './assets/images/icons/sun.png';
+                themeIcon.alt = 'Switch to Dark Mode';
+            }
+        });
+    </script>
 </body>
 </html>
