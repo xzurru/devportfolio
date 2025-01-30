@@ -386,6 +386,28 @@ body.dark-mode .contact a:hover {
     background: #555;
 }
 
+body.dark-mode .skills-section {
+    background: #222;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #444;
+}
+
+body.dark-mode .skill {
+    background: #333;
+    border-color: #555;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .skill img {
+    filter: brightness(0.8);
+}
+
+body.dark-mode .placeholder-image {
+    background: #222;
+    border-color: #444;
+}
+
 /* Button Styling */
 .toggle-theme {
     position: absolute;
@@ -450,4 +472,3 @@ body.dark-mode .toggle-theme img {
         transform: translate(0, 0);
     }
 }
-
